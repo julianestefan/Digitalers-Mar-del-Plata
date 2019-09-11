@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- 
+        Estilos en el archivo HTML. Esto no es lo habitual sólo se han puesto así apra dar los ejemploe de formass mas agil 
+        El enfoque correcto es usar una hoja de Estilos externa. Esto es así apra evitar que los archivos html se 
+        hagan demasiado grandes en caantidad de lineas. PAraa importar un archivo css se usa la siguiente instruccón:
+    
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+        En este archivo se escribe las instrucciones css como sigue a continuación sin necesidad de usar la etiqueta style
+    -->
+    <style>
+        /* Ejemplo de estilos generales. Estos estilos afectan a todas las etiquetas a del archivo */
+        a {
+            text-decoration: none;
+            color: lightblue;
+            background: blue;
+            padding: 10px 20px;
+            margin: 10px 15px;
+        }
+
+        /* Ejemplo de uso de clase */
+        .blog {
+            border: 1px solid blue;
+        }
+
+        /* Este es un ejemplo para seleccioanr dentro de una etiqueta las etiquetas inmediatamente inferiores en la 
+        jerarquiaa de la cascada, tambíen llamadas hijas. El > nos permite hacer esto. En este ejemplo los estilos
+        se aplican de la siguiente maneraa mira dentro de las etiquetas que posean la clase blog, luego mira en caada
+        div que haya dentro de estas y por último se los aplica a todo los p que esten dentro de estos divs. 
+         */
+        .blog>div>p {
+            font-size: 25px;
+        }
+
+        /* Ejemplo de pseudo selectores. Hover y focus son dos de muchos ejemplos posibles e indican estados que pueden 
+        toomar las etiquetas html. En el caso de hover se aplica cuando el estado de la etiqueta es que tiene el mouse
+        por encima y en el caso de focus indica que el elemento es el que tiene el foco, es decir en el que se está
+        escribiendo actualmente.
+        */
+        a:hover {
+            background: lightblue;
+            color: blue;
+        }
+
+        input:focus {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <section>
+            <h1> ¿Quienes somos?</h1>
+            <!--Estilo en linea-->
+            <p style="background: red">
+                dasdadadsa
+                dasdsadsa
+                dasdsadasd
+                dasdsaasd
+            </p>
+            <p>
+                hdsadas
+                dasdsadsadsadasd
+            </p>
+        </section>
+        <section>
+            <h1>Articulos</h1>
+            <!-- Ejemplo de uso de clase-->
+            <article class="blog">
+                <div style="display:flex; border: 1px solid blue; padding: 10px 0 20px 30px; background: red">
+                    <img width="50px" src="Julián Estefan - Foto.jpg">
+                    <div style="margin-left: 20px">
+                        <h2>Julian Estefa</h2>
+                        <p>05/09/2019</p>
+                    </div>
+                </div>
+                <div>
+                    <p>Contenido </p>
+                    <p>Contenido </p>
+                    <p>Contenido </p>
+                    <p>Contenido </p>
+                    <div class="pie">
+                        <p> Otro contenido</p>
+                    </div>
+                </div>
+                <a href="blogs.html"> link </a>
+
+                <!--El action es a modo de ejemplo. Actualmente no hay ningún archivo php que se ejecute. 
+                Este será el archivo que se encargará de procesar el formulario
+                -->
+                <form action="form.php">
+                    <label> Nombre</label>
+                    <!--Todos los input deben tener un atributo name para ser procesados posteriormente-->
+                    <input name="direccion" type="text" placeholder="Nombre">
+                    <input type="email">
+                    <input type="password">
+                    <input type="checkbox">
+                    <input type="radio">
+                    <textArea name="description" placeholder="descripción" row="30" value="Mi nombre es..">
+                        Mi nombre es...
+                    </textArea>
+                    <select name="programming">
+                        <!--El value es lo que se envia cuando se quiere procesar el formulario-->
+                        <option value="js"> Javascript </option>
+                        <option value="java"> Java </option>
+                        <option value="php"> PHP</option>
+                    </select>
+                    <!-- Estos dos son equivalentes en funcionaldiad y se encargan de enviar el formulario -->
+                    <input type="submit" value="Enviar">
+                    <button type="submit"> Enviar</button>
+                </form>
+            </article>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
