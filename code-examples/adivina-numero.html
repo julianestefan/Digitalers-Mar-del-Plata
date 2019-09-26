@@ -12,7 +12,7 @@
     <script>
         const secretNumber = Math.floor(Math.random() * 100) + 1;
         let currentNumber = 0;
-        
+
         do {
             currentNumber = parseInt(prompt('Ingrese un numero'));
 
@@ -23,7 +23,7 @@
             } else {
                 alert("Haz encontrado el número")
             }
-        } while (secretNumber != currentNumber);
+        } while (secretNumber !== currentNumber);
 
     </script>
 </body>
