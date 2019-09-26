@@ -16,6 +16,8 @@
         do {
             currentNumber = parseInt(prompt('Ingrese un numero'));
 
+            if( currentNumber === 0 ) break;
+
             if (currentNumber < secretNumber) {
                 alert("El número debe ser mayor")
             } else if (currentNumber > secretNumber) {

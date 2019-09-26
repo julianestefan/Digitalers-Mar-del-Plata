@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            box-sizing: border-box;
+            box-shadow: 3px 3px 6px rgb(224, 205, 205);
+            width: 31%;
+            margin: 10px 1%;
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .card .data {
+            padding: 0.8em;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+        <input id="busqueda" type="text" placeholder="Buscar" value="">
+        <button type="submit"> Buscar </button>
+    </form>
+
+    <section class="container">
+    </section>
+
+
+    <script>
+        function Alquiler(imagen, direccion, precio, ambientes) {
+            this.imagen = imagen;
+            this.direccion = direccion;
+            this.ambientes = ambientes;
+            this.precio = precio;
+        };
+
+        const alquileres = [];
+        alquileres.push(new Alquiler(
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv1nWYfpLvbPasD6Tl3qsYaZzJw6mjv4iehTOoXKbITtZi5i0N",
+            "Sarmiento 2650",
+            5000,
+            4
+        ));
+        alquileres.push(new Alquiler(
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSQwmbzPt0FQsURMW37wwT5lVfgfJyl3idcXzpUsnXmi_Ty0mC",
+            "Alsina 2650",
+            7000,
+            3
+        ));
+
+        function mostrarAlquileres(data) {
+            const contenedor = document.querySelector('.container');
+            let contenido = '';
+            contenedor.innerHTML = contenido;
+            
+            for (let i = 0; i < data.length; i++) {
+                const elemento = data[i];
+
+                contenido += `
+            <div class="card">
+            <img alt="casa"
+                src="${elemento.imagen}">
+            <div class="data">
+                <p> ${elemento.direccion} </p>
+                <p> ${elemento.ambientes} ambientes </p>
+                <p> Precio : $ ${elemento.precio} </p>
+            </div>
+        </div>`;
+            }
+
+            contenedor.innerHTML = contenido;
+        };
+
+        function filtrar(event) {
+            event.preventDefault();
+
+            const valor = document.getElementById("busqueda").value;
+
+            const alquileresFiltrados =  alquileres.filter(alquiler => alquiler.direccion.includes(valor));
+            
+            mostrarAlquileres(alquileresFiltrados);
+        }
+
+        mostrarAlquileres(alquileres);
+        document.querySelector('form').onsubmit = filtrar;
+    </script>
+</body>
+
+</html>

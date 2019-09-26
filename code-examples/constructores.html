@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        function Persona(nombre, edad, sexo){
+            this.nombre = nombre;
+            this.edad = edad;
+            this.sexo = sexo; 
+            this.saludar = function() {
+                return "Hola soy" + nombre; 
+            }
+            this.cumpliredad = function () {
+                this.edad++;
+            }
+            this.darDatos = function(){
+                return "Mi nombre es " + this.nombre + "y tengo "+ this.edad
+            }
+        }
+
+        const persona1 = new Persona("Julian" , 28, "Masculino");
+
+        console.log(persona1)
+        persona1.cumpliredad();
+        document.write(persona1.darDatos() );
+    
+    
+    </script>
+
+</body>
+</html>
