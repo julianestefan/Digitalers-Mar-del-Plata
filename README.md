@@ -9,7 +9,7 @@ Links relevantes:
 
 ENGLISH
 
-This is the code repository used for the course [Digit@lers] (http://www.digitalers.com.ar/) taught in the city of Mar del Plata, carried out by 
+This is the code repository used for the course [Digit@lers](http://www.digitalers.com.ar/) taught in the city of Mar del Plata, carried out by 
 the company Telecom. Here you will find the different examples that will be done 
 during the course, as well as material of interest to the students.
 

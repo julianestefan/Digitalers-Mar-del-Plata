@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="titulo" >Contenido</h1>
+    <p>Hellow rold</p>
+
+    <script>
+
+        /*
+        let nombre = prompt("Ingrese su nombre");
+
+        if(  nombre.toLowerCase() === "julian" ){
+            document.write("hola " + nombre);
+        } else {
+            document.write("No sos julian")
+        }
+        */
+
+        /* const medioPago = prompt("Ingrese su medio de pago (1 para efectivo, 2 para tarjeta de credito o 3 para mercado pago)");
+
+        switch(medioPago) {
+            case '1': 
+                document.write("pagaste en efectivo"); break;
+            case '2': 
+                document.write("Pagaste con tarjeta");
+                break;
+            case "3": 
+                document.write("Pagaste con emrcadopago");
+                break;
+            default: 
+                document.write("Ingreso el medio de pago incorrecto")
+        } */
+
+        /* 
+                let count = 0
+                while( count <= 20 ) {
+                    document.write(count +  ' -')
+                    count++;
+                }
+         */
+/* 
+        let numero = 0;
+        do {
+            numero = parseInt(prompt("Ingrese un numero :"));
+        } while (numero == 0);
+        66
+ */
+        /*
+        HAcer un jeugo que calcule un número aleatorio y el usuario tenga que ingresar un numero. 
+        El programa debe decirle si el numero es mayor o menor y pedirle de nuevo un numero hasta que 
+        el usuario acierte 
+        */
+
+        const montoAlquileres = [12500, 8000, 7500, 11000];
+
+        const montoUsuario = prompt("Ingrese el monto maximo que quiera pagar");
+
+        let count = 0;
+/* 
+        for( let i = 0; i < montoAlquileres.length; i++ ){
+            if ( montoAlquileres[i] <= montoUsuario ) {
+                count++
+            }
+        }
+ */
+        for ( let element of montoAlquileres ) {
+            if (element <= montoUsuario) {
+                count++;
+            }
+        }
+
+        Date.get
+
+        //document.getElementById("titulo").innerHTML =  "La cantidad de alquileres enocntrados fue de " + count;
+        document.querySelector('#titulo').innerHTML = "La cantidad de alquileres enocntrados fue de " + count;
+    </script>
+</body>
+
+</html>
